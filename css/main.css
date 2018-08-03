@@ -655,7 +655,8 @@ footer {
   margin: 0 auto; }
   .nav-footer a {
     text-decoration: none;
-    font-weight: 700; }
+    font-weight: 700;
+    position: relative; }
 
 .container--footer {
   max-width: 25em; }
