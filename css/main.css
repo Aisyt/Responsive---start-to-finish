@@ -308,12 +308,14 @@ template {
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  * img, *::before img, *::after img {
-    max-width: 100%;
-    height: auto; }
 
 body {
-  color: #048ca8; }
+  color: #048ca8;
+  text-align: center; }
+
+img {
+  max-width: 100%;
+  height: auto; }
 
 .container {
   width: 90%;
@@ -324,6 +326,14 @@ body {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+.lg-screen {
+  display: none; }
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 5em 2.5em; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em; }
@@ -336,7 +346,8 @@ h1 {
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.15;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 3px; }
 
 h2 {
   font-size: 19.2px;
@@ -348,9 +359,28 @@ h2 {
 .title-large {
   font-size: 48px;
   font-size: 3rem;
-  font-weight: 900; }
+  font-weight: 900;
+  line-height: .9; }
   .title-large span {
     font-weight: 300; }
+
+.title-box {
+  background: #d31869;
+  color: white;
+  margin: 0 auto;
+  padding: 2em;
+  -webkit-transform: translateY(30%);
+  transform: translateY(30%);
+  max-width: 90%; }
+  @media (min-width: 495px) {
+    .title-box {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%); } }
+  .title-box + .bg-primary {
+    padding-top: 6em; }
+    @media (min-width: 495px) {
+      .title-box + .bg-primary {
+        padding-top: 8em; } }
 
 .text-intro {
   font-size: 19.2px;
@@ -377,9 +407,6 @@ h2 {
   padding-top: 10em;
   padding-bottom: 10em;
   text-align: center; }
-
-.hero-img {
-  display: none; }
 
 .main-nav {
   background: #d31869;
@@ -471,7 +498,28 @@ a {
 .grid {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.col-full {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.sales-points {
+  padding: 10vh 0 0; }
+  .sales-points .sales-point {
+    margin-bottom: 3.5em; }
+    .sales-points .sales-point:first-of-type {
+      margin-top: 1.5em; }
+    .sales-points .sales-point:last-child {
+      margin-bottom: 0; }
 
 .btn {
   padding: .75em 2.5em;
